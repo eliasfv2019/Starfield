@@ -24,7 +24,6 @@ void draw()
   //your code here
 }
 
-
 class NormalParticle implements Particle {
   double x, y;
   color c = color(random(255), random(255), random(255));
@@ -55,22 +54,18 @@ interface Particle
   //your code here
 }
 
-
-
 class OddballParticle implements Particle//uses an interface
 {
   int x, y;
   //your code here
   public void show() {
-    ellipseMode(CENTER);
     fill(255, 255, 0);
-    rect((float)x, (float)y, 30, 30);
+    ellipse((float)x, (float)y, 30, 30);
   }
 
   public void move() {
   }
 }
-
 
 class JumboParticle extends NormalParticle//uses inheritance
 {
